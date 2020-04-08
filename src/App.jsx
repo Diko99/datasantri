@@ -30,7 +30,7 @@ class App extends Component {
   }
 
   onGetDataSantri = () => {
-    axios.get('http://localhost:4000/posts?_sort=id&_order=desc')
+    axios.get('https://my-json-server.typicode.com/Diko99/datasantri/posts/posts?_sort=id&_order=desc')
       .then((result) => {
         this.setState({
           dataSantri: result.data
@@ -54,7 +54,7 @@ class App extends Component {
   }
 
   onHandlePost = () => {
-    axios.post('http://localhost:4000/posts', this.state.postDataSantri)
+    axios.post('https://my-json-server.typicode.com/Diko99/datasantri/posts/', this.state.postDataSantri)
       .then(() => {
         this.onGetDataSantri()
         this.setState({
@@ -68,7 +68,7 @@ class App extends Component {
   }
 
   onHandleUpdate = () => {
-    axios.put(`http://localhost:4000/posts/${this.state.postDataSantri.id}`, this.state.postDataSantri)
+    axios.put(`http://my-json-server.typicode.com/Diko99/datasantri/posts/${this.state.postDataSantri.id}`, this.state.postDataSantri)
       .then(() => {
         this.onGetDataSantri()
         this.setState({
@@ -89,7 +89,7 @@ class App extends Component {
   }
 
   onHandleDelete = (id) => {
-    axios.delete(`http://localhost:4000/posts/${id}`)
+    axios.delete(`http://my-json-server.typicode.com/Diko99/datasantri/posts/${id}`)
       .then(() => {
         this.onGetDataSantri()
       })
