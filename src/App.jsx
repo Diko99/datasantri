@@ -215,7 +215,6 @@ class App extends Component {
           onHandleUpdate={onHandleUpdate}
           onHandleDelete={onHandleDelete}
         />
-
         <PaginationButton
           currentPage={currentPage}
           paginationNumbers={paginationNumbers}
