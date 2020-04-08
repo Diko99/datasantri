@@ -30,7 +30,7 @@ class App extends Component {
   }
 
   onGetDataSantri = () => {
-    axios.get('https://my-json-server.typicode.com/Diko99/datasantri/posts/posts?_sort=id&_order=desc')
+    axios.get('https://my-json-server.typicode.com/Diko99/datasantri/posts')
       .then((result) => {
         this.setState({
           dataSantri: result.data
